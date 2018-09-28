@@ -1,0 +1,26 @@
+BLACKJACK
+by Tim Stoddard
+
+
+INSTRUCTIONS
+To run the game:
+1. `cd` into the source code folder via the command line.
+2. Run `python3 blackjack.py` to start the game.
+3. Play the game!
+
+To run the unit tests:
+1. `cd` into the source code folder via the command line.
+2. Run `python3 test.py`
+Note: Not all functions were tested via unit testing, since most of them were tested extensively by playing the game during development.
+
+
+DESIGN DECISIONS
+I split up the game into four modules: the game logic, the Player class, the Deck class, and the Card class. The game logic module contains all the functions that run the game on the command line. The Player class contains methods for managing and printing (via the command line) a player's hand. The Deck class contains methods for initializing the stack of cards, shuffling cards, drawing cards, and discarding cards. The Card class is a simple class that has fields representing those of a playing card.
+
+
+DATA STRUCTURES
+I really only used lists for the data structures in this program; this choice was because all the elements of Blackjack are easily represented by a list (the deck, the players, each player's hand). An interesting algorithm that I implemented is in the generateTotals method of the Player class. I used a Python library function to take the Cartesian product of 2 lists, along with the list reduce() function, to calculate all possible totals for a given hand (since Ace can be 1 or 11, so sometimes there is more than one possible total).
+
+
+CHOICE OF TOOLING
+The language I chose for this project was Python; I chose it because it has simple syntax and includes many useful libraries by default.
